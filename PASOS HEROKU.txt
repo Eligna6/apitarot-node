@@ -1,0 +1,55 @@
+Server heroku
+1. Signup to heroku
+2. Login to heroku
+3. Create new app
+4. Agregar db cloud to mongo atlas, crear un cluster y sus configuraciones respectivas
+5. Configurate in setting config vars
+6. Installing heroku cli
+7. heroku (para ver todos los comandos) en otra consola
+8. heroku --version en otra consola
+9. heroku login
+10. heroku apps, confirm y (para ver tus apps en heroku y selecccionar una)
+11. Agregate .Procfile doc en root directory to server with content web: node server.js
+12. In .gitignore inside .env node_modules
+13. git init (si no tienes inicializado un proyecto)
+14. git add .
+15. git commit -m "first commit"
+16. heroku git:remote -a gql-server-node
+17. git push heroku master (deprecado)​. Actual es: git push heroku HEAD:master
+18. heroku open
+19. Si no hay problemas debería apuntar al path pero sin ruta, si hay problema saldría la recomendación de ver el log de errores. heroku logs --tail​ (verificarlos por esta forma)
+
+Client heroku
+1. New create gql-client-escalab
+2. Settings in config vars with .env variables
+3. Crear Procfile con web: node server.js
+4. Crear server.js en la raíz con compression:
+// server.js
+const express = require('express');
+const compression = require('compression');
+const path = require('path');
+const app = express();
+
+app.use(compression());
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('*', function(req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log(`App is running on port ${PORT}`);
+});
+
+5. heroku login
+6. heroku apps​
+7. .gitignore con node_modules y .env
+8. git add .
+9. git commit -m "first commmit"
+10. heroku git:remote -a react-escalab-ecommerce
+10. git push heroku master (deprecado)​, git push heroku HEAD:master (actualizado)
+11. heroku open
+12. Si hay problemas: heroku ps:restart; heroku logs --tail​ (verificarlos por esta forma)
+13. Agregar en firebase el dominio seguro para no haber problemas con los procesos de autenticación

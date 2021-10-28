@@ -1,0 +1,5 @@
+Node.js - proyecto final
+DONDE QUEDÉ
+clase 5.1 minuto 0 
+TO DO
+*replicar ruta y controller "sub" con mi modelo "card"
