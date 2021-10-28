@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const { ObjectId } = mongoose.Schema;
+// const { ObjectId } = mongoose.Schema;
 
 const cardSchema = new mongoose.Schema(
   {
@@ -28,7 +28,7 @@ const cardSchema = new mongoose.Schema(
       lowercase: true,
       index: true,
     },
-    parent: { type: ObjectId, ref: "Deck", required: true },
+    imgUrl: String,
   },
   { timestamp: true }
 );

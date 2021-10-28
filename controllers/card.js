@@ -1,5 +1,4 @@
 const Card = require("../models/card");
-const Deck = require("../models/deck");
 const slugify = require("slugify");
 
 // ES7: async-await
@@ -17,22 +16,22 @@ exports.list = async (req, res) => {
   res.json(await Card.find({}).sort({ createdAt: -1 }).exec());
 };
 
-/*exports.read = async (req, res) => {
-  let sub = await Card.findOne({ slug: req.params.slug }).exec();
-  res.json(sub);
-};*/
-
 exports.read = async (req, res) => {
-  let deck = await Deck.findOne({ slug: req.params.slug }).exec();
-  const cards = await Card.find({ parent: deck })
-    .populate("card")
-    .exec();
-
-  res.json({
-    deck,
-    cards,
-  });
+  let card = await Card.findOne({ slug: req.params.slug }).exec();
+  res.json(card);
 };
+
+// exports.read = async (req, res) => {
+//   let deck = await Deck.findOne({ slug: req.params.slug }).exec();
+//   const cards = await Card.find({ parent: deck })
+//     .populate("card")
+//     .exec();
+
+//   res.json({
+//     deck,
+//     cards,
+//   });
+// };
 
 exports.update = async (req, res) => {
   const { number } = req.body;

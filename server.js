@@ -6,7 +6,7 @@ const cors = require("cors");
 const { readdirSync } = require("fs");
 require("dotenv").config();
 const swaggerJsDoc = require("swagger-jsdoc");
-const swaggerUi = require("swaggerUi");
+const swaggerUi = require("swagger-ui-express");
 
 // app
 const app = express();
