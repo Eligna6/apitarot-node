@@ -159,18 +159,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@grpc/grpc-js@npm:~1.3.0":
-  version: 1.3.8
-  resolution: "@grpc/grpc-js@npm:1.3.8"
+"@grpc/grpc-js@npm:~1.4.0":
+  version: 1.4.2
+  resolution: "@grpc/grpc-js@npm:1.4.2"
   dependencies:
+    "@grpc/proto-loader": ^0.6.4
     "@types/node": ">=12.12.47"
-  checksum: 12df94227d99ce410dd146f31a27dc34b5dbcbbea6190fd9604ace8d902ce5614272054cead9ddf0ed6db4562ea5bdccf593d71905a23ab1125686d2125d4cd5
+  checksum: eb0a6077db499714afd6ccd587d14f4b81871b933c17f7fa2f295447163033bf8a3a1302be1195bb90fefe78c45abfb856be9983562e5a4c9d51db98967fbf0d
   languageName: node
   linkType: hard
 
-"@grpc/proto-loader@npm:^0.6.1":
-  version: 0.6.5
-  resolution: "@grpc/proto-loader@npm:0.6.5"
+"@grpc/proto-loader@npm:^0.6.1, @grpc/proto-loader@npm:^0.6.4":
+  version: 0.6.6
+  resolution: "@grpc/proto-loader@npm:0.6.6"
   dependencies:
     "@types/long": ^4.0.1
     lodash.camelcase: ^4.3.0
@@ -179,7 +180,7 @@ __metadata:
     yargs: ^16.1.1
   bin:
     proto-loader-gen-types: build/bin/proto-loader-gen-types.js
-  checksum: 8fb28e51aa9c531c292a7711c16d4dab06371b32c620a7af1112e5fec8dc2e3e443fb7b8e1c345313c63083940487b6fa142f466761dde6441eaea8a8ce9b0d0
+  checksum: d147accc4d6bbdfd67ca681192cea286511aadc532930b77106bb458b094a8473031eb0de523e5fe2e0e87c4f5ee7c4c31248e01276b910040da169e0f6b3196
   languageName: node
   linkType: hard
 
@@ -323,9 +324,9 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*, @types/node@npm:>=12.12.47, @types/node@npm:>=13.7.0":
-  version: 16.11.1
-  resolution: "@types/node@npm:16.11.1"
-  checksum: 22cea470b89292810733b8b9fc1b6a1873bc3ed4d4cdf2f25e777dc607994bd7c12e64166d1a66dd5924734192b0a891b6aeb6813aa935f731345f4086234375
+  version: 16.11.6
+  resolution: "@types/node@npm:16.11.6"
+  checksum: 6e19634766ff589d3d2f361c2196b671f8f133cdadc5ad347a621c360d8994b6c4fbccfb2ad9c60c588c593831a96497c9c6b77d2b7e91be723384b94f6368e7
   languageName: node
   linkType: hard
 
@@ -1553,10 +1554,10 @@ fsevents@~2.3.2:
   linkType: hard
 
 "google-gax@npm:^2.24.1":
-  version: 2.27.1
-  resolution: "google-gax@npm:2.27.1"
+  version: 2.28.0
+  resolution: "google-gax@npm:2.28.0"
   dependencies:
-    "@grpc/grpc-js": ~1.3.0
+    "@grpc/grpc-js": ~1.4.0
     "@grpc/proto-loader": ^0.6.1
     "@types/long": ^4.0.0
     abort-controller: ^3.0.0
@@ -1571,7 +1572,7 @@ fsevents@~2.3.2:
     retry-request: ^4.0.0
   bin:
     compileProtos: build/tools/compileProtos.js
-  checksum: 24aa0b876000cd9bb2535d13e81aa938d0f93f3a28a29a806cf464434b317c5fc1739825316d44d6b586376c57c5ab320e1b06d75e3a342260bf696463e6e49c
+  checksum: 63e2ef42e4466848a318de268f5fc2b95fa0bfe3edaec675c97544478fa16b8fbc72353ceba950efad5c006cb78e86d29d8ce7f9641554b80c9427655cf6b344
   languageName: node
   linkType: hard
 
@@ -2544,11 +2545,11 @@ fsevents@~2.3.2:
   linkType: hard
 
 "node-fetch@npm:^2.6.1":
-  version: 2.6.5
-  resolution: "node-fetch@npm:2.6.5"
+  version: 2.6.6
+  resolution: "node-fetch@npm:2.6.6"
   dependencies:
     whatwg-url: ^5.0.0
-  checksum: 4e83db450718e70762882f00d96f647a7f2f3170035225934ddd5450cb1d91ef339ceb180d3687bcb0a6ed78c3fa5636ce8d3e44ec81ab59e0224ebf8965f65f
+  checksum: ee8290626bdb73629c59722b75dcf4b9b6a67c1ed7eb9102e368479c4a13b56a48c2bb3ad71571e378e98c8b2c64c820e11f9cd39e4b8557dd138ad571ef9a42
   languageName: node
   linkType: hard
 
@@ -2825,9 +2826,9 @@ fsevents@~2.3.2:
   linkType: hard
 
 "proto3-json-serializer@npm:^0.1.1":
-  version: 0.1.4
-  resolution: "proto3-json-serializer@npm:0.1.4"
-  checksum: da6ed8e90059bec6c2ad838643acb0ccf3d87c4b1cb8668f6e96a2e7332fbd85e4ac6b370501e1d133847a4dd8aa491ab1a31ad507ca8b3564c3d6c9213c2c44
+  version: 0.1.5
+  resolution: "proto3-json-serializer@npm:0.1.5"
+  checksum: 62f60f14a28d2e3a2587551fa1c3f62ec2ef6256ebba7ea0b20220a6a60b27182fb3c8d5f6fcc406e8c15441441a1122ba4abd3e79597b15b426bfb9e99665dc
   languageName: node
   linkType: hard
 
